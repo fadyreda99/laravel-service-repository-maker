@@ -1,0 +1,26 @@
+{
+    "name": "fadyreda99/laravel-module-maker",
+    "description": "Generate Service + Repository + Module with optional model CRUD",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Fadyreda99\\LaravelModuleMaker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fadyreda99\\LaravelModuleMaker\\ModuleMakerServiceProvider"
+            ]
+        }
+    },
+ "require": {
+    "php": ">=8.0",
+    "illuminate/support": "^12.40",
+    "illuminate/http": "^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0",
+        "illuminate/console": "^12.40"
+},
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
