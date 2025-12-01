@@ -5,14 +5,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Fadyreda99\\LaravelModuleMaker\\": "src/"
+            "Fadyreda99\\MakeModule\\": "src/"
         }
     },
     "extra": {
         "laravel": {
-            "providers": [
-                "Fadyreda99\\LaravelModuleMaker\\ModuleMakerServiceProvider"
-            ]
+             "providers": [
+                "Fadyreda99\\MakeModule\\MakeModuleServiceProvider"
+                ]
         }
     },
     "require": {
