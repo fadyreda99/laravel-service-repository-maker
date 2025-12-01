@@ -1,5 +1,5 @@
 {
-    "name": "fadyreda99/laravel-module-maker",
+    "name": "fadyreda99/laravel-service-repository-maker",
     "description": "Generate Service + Repository + Module with optional model CRUD",
     "type": "library",
     "license": "MIT",
