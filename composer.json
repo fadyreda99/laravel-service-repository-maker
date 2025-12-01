@@ -15,12 +15,12 @@
             ]
         }
     },
- "require": {
-    "php": ">=8.0",
-    "illuminate/support": "^12.40",
-    "illuminate/http": "^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0",
-        "illuminate/console": "^12.40"
-},
+    "require": {
+        "php": ">=8.0",
+        "illuminate/http": "^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0",
+        "illuminate/support": "^8.0 || ^9 || ^10 || ^11 || ^12",
+        "illuminate/console": "^8.0 || ^9 || ^10 || ^11 || ^12"
+    },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
