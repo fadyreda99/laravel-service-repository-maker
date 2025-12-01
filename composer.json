@@ -11,7 +11,7 @@
     "extra": {
         "laravel": {
              "providers": [
-                "Fadyreda99\\MakeModule\\MakeModuleServiceProvider"
+                "Fadyreda99\\MakeModule\\ModuleMakerServiceProvider"
                 ]
         }
     },

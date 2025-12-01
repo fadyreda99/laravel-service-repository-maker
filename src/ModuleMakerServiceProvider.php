@@ -7,7 +7,7 @@ use Fadyreda99\MakeModule\Commands\MakeService;
 use Fadyreda99\MakeModule\Commands\MakeRepository;
 use Fadyreda99\MakeModule\Commands\MakeModule as MakeModuleCommand;
 
-class MakeModuleServiceProvider extends ServiceProvider
+class ModuleMakerServiceProvider extends ServiceProvider
 {
     public function register()
     {
