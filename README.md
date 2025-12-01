@@ -12,7 +12,7 @@ This package helps you apply clean architecture, avoid repeating boilerplate cod
 ✔ Support for namespaced paths (`Admin/User`, `Api/V1/Product`, …)  
 ✔ Works with Laravel **8 / 9 / 10 / 11 / 12**  
 ✔ Zero configuration — just install and use  
-✔ Generates clean, organized architecture  
+✔ Generates clean, organized architecture
 
 Folder structure produced:
 
@@ -51,6 +51,7 @@ php artisan make:repository UserRepository --model=User
 ```
 
 Output:
+
 ```
 app/Repositories/UserRepository.php
 ```
@@ -122,6 +123,7 @@ php artisan make:service UserService --model=User
 ```
 
 Output:
+
 ```
 app/Services/UserService.php
 ```
@@ -132,23 +134,23 @@ app/Services/UserService.php
 public function allWithCondition($request)
 {
     $data = $request->all();
-    $condition = $data['condition'] ?? [];
-    $with = $data['with'] ?? [];
-    $paginated = $data['paginated'] ?? false;
-    $limit = $data['limit'] ?? 10;
-    $orderBy = $data['order_by'] ?? [];
+    $condition = [];
+    $with = [];
+    $paginated =  false;
+    $limit = 10;
+    $orderBy = [];
 
     return $this->repository->allWithCondition($condition, $with, $paginated, $limit, $orderBy);
 }
 
-public function find($request)
-{
-    return $this->repository->find(
-        $request->input('id'),
-        $request->input('with', []),
-        $request->input('condition', [])
-    );
-}
+ public function find($request)
+    {
+        $data = $request->all();
+        $id = $data['id'];
+        $condition = [];
+        $with = [];
+        return $this->repository->find($id, $with, $condition);
+    }
 
 public function create($request)
 {
@@ -160,10 +162,13 @@ public function update($request)
     return $this->repository->update($request->input('id'), $request->all());
 }
 
-public function delete($request)
-{
-    return $this->repository->delete($request->input('id'), $request->input('condition', []));
-}
+ public function delete($request)
+    {
+        $data = $request->all();
+        $id = $data['id'];
+        $condition = [];
+        return $this->repository->delete($id, $condition);
+    }
 ```
 
 ---
@@ -261,4 +266,3 @@ This package is open‑source and licensed under the **MIT License**.
 
 Pull requests are welcome!  
 Feel free to open issues for improvements and ideas.
-
